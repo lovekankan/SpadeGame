@@ -25,13 +25,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.spade.mingsheng</string>
+				<string>com.yileweb.djx</string>
 				<key>bundle-version</key>
-				<string>1.0</string>
+				<string>1.4.0</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>SpadeGaming</string>
+				<string>DJX</string>
 			</dict>
 		</dict>
 	</array>
