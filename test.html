@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name=format-detection content="telephone=no">
+<title>信息注册表</title>
+
+<!-- 获取外部的css文件 -->
+</head>
+
+<body>
+	<h1 align="center">请在下表填写您的信息</h1>
+	<br/>
+	<table align="center" border="1px">
+		<tr>
+			<th align="right">姓名</td>
+			<td align="left"><input type="text"></input></td>
+		<tr>
+		
+		<tr>
+			<td align="righr">年龄</td>
+			<td align="righr">年龄</td>
+			<td align="left"><input type="text"></input></td>
+		<tr>
+		
+	</table>
+	
+	<dl>
+	<dt>游戏名称</dt>
+		<dd>星际争霸</dd>
+		<dd>红色警戒</dd>
+	<dt>部门名称</dt>
+		<dd>技术部</dd>
+		<dd>培训部</dd>
+	</dl>
+	
+	姓名:<input type="text"  name="user"/>
+	<br/>
+ 	密码:<input type="password" name="pwd"/>
+	<br/>
+ 	<!-- 单选框:   通过name属性设置分组     通过checked设置默认选项   -->
+ 	性别:<input type="radio"  name="sex" checked="checked" />男    <input type="radio" name="sex" />女
+	<br/>
+ 	<!-- 复选框 -->
+ 	爱好:<input type="checkbox" name="hobby" />java <input type="checkbox" name="hobby" />大数据   <input type="checkbox" name="hobby" />php
+	<br/> 
+ 	上传文件:<input type="file">
+	<br/>
+ 	<!--下拉列表    selected:默认项-->
+ 	国籍:<select>
+ 		<option>中国</option>
+ 		<option>美国</option>
+ 		<option>朝鲜</option>
+ 		<option selected="selected">巴基斯坦</option>
+ 	</select>
+	<br/>
+ 	<!-- 普通按钮    value是按钮的名字     onclick:是点击按钮触发的事件     alert(内容):是一个提示的方法 -->
+ 	普通按钮:<input type="button" value="普通按钮"  onclick="alert('哈哈')"/>
+	<br/>
+ 	<!-- 多行文本框   row:行数     cols:列数 -->
+ 	个人介绍:<textarea rows="4" cols="50" />我们该下课了</textarea>
+ 	<!-- 提交:专门用来提交当前的表单信息 -->
+ 	<input type="submit" value="提交" />
+	<br/>
+ 	<!--  重置:将当前表单的状态恢复到最开始的状态,不代表情况 -->
+ 	<input type="reset" value="重置" />
+	<br/>
+
+	<form  action=""  method="post">
+	    <table>
+	    	<tr>
+	    		<th>姓名:</th>
+	    		<td><input type="text"  name="user"/></td>
+	    	</tr>
+	    	<tr>
+	    		<th>密码:</th>
+	    		<td><input type="password" name="pwd"/></td>
+	    	</tr>
+	    	<tr>
+	    		<th>性别:</th>
+	    		<td><input type="radio"  name="sex" checked="checked" />男    <input type="radio" name="sex" />女</td>
+	    	</tr>
+	    	<tr>
+	    		<th>爱好:</th>
+	    		<td><input type="checkbox" name="hobby" />java <input type="checkbox" name="hobby" />大数据   <input type="checkbox" name="hobby" />php</td>
+	    	</tr>
+	    	<tr>
+	    		<th>上传文件</th>
+	    		<td><input type="file"></td>
+	    	</tr>
+	    	<tr>
+	    		<th>普通按钮</th>
+	    		<td><input type="button" value="普通按钮"  onclick="alert('哈哈')"/></td>
+	    	</tr>
+	    	<tr>
+	    		<th align="right">国籍</th>
+	    		<td>
+					<select>
+						<option>中国</option>
+						<option>美国</option>
+						<option>朝鲜</option>
+						<option selected="selected">巴基斯坦</option>
+					</select>
+				</td>
+	    	</tr>
+	    	<tr>
+	    		<th>个人介绍</th>
+	    		<td><textarea rows="4" cols="50" />我们该下课了</textarea></td>
+	    	</tr>
+	    	<tr>
+	    		<th></th>
+	    		<td><input type="submit" value="提交" /><input type="reset" value="重置" /></td>
+	    	</tr>
+
+	    </table>
+	</form>
+	<br/><br/><br/><br/><br/>
+	
+	
+	<script type="text/javascript">
+	//全局变量:直接写在script内部的变量
+	//特点:可以省略var
+	//var  d = 3;
+	d = 3;
+
+	function div(){
+		//获取三个标签对象
+		var input1 = document.getElementById("1");
+		//通过name调用
+		//var input11s - document.getElementsByName("number1");
+		//var input11 = input11s[0];
+		var input2 = document.getElementById("2");
+		var input3 = document.getElementById("3");
+		//获取值-默认都是字符串
+		var num1 = input1.value;
+		var num2 = input2.value;
+		
+		//求商--转换成浮点型计算
+		var shang = parseFloat(num1)/parseFloat(num2);
+		
+		alert(shang);
+		//3.将得到的结果重新交给标签显示
+		//将值传给input3
+		input3.value = shang;
+
+		//注意点:在js中两个整数相除得到的是小数,在java中得到的是整数
+		var x =3,y = 2;
+		var z = x/y;
+		document.write(z);
+		
+		//流程控制语句
+		if(1){//在js中,0代表false    非零代表ture
+			
+		}
+		
+		var dd = 2;
+		switch(dd){
+			case 1:{
+			
+			}
+				break;
+			case 2:{
+			
+			}
+				break;
+			default:
+				break;
+		}
+	}	
+	</script>
+
+</body>
+
+	第一个数:<input id="1" type="text" name="number1" value="11"/><br/>
+	第二个数:<input id="2" type="text" name="number2" /><br/>
+	商:<input id="3" type="text" name="number3" />
+	<!-- onclick:是一个点击事件,我们将点击按钮触发事件的过程称为事件驱动 -->
+	<input type="button"  value="求商" onclick="div()"/>
+
+</html>
